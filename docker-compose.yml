@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  sub-diy:
+    build: joy88000/sub-diy
+    container_name: sub-diy
+    restart: always
+    environment:
+      - TZ=Asia/Shanghai
+    ports:
+      - 7700:8080
+      - 7701:25500
