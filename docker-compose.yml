@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   sub-diy:
-    build: joy88000/sub-diy
+    image: joy88000/sub-diy
     container_name: sub-diy
     restart: always
     environment:
@@ -9,3 +9,7 @@ services:
     ports:
       - 7700:8080
       - 7701:25500
+    #volumes:
+    #  - $PWD/vue:/app/sub-web
+    # 请自行拷贝文件后,再修改docker-compose的挂载
+    # 拷贝命令: docker cp sub-diy:/app/sub-web $PWD/vue
