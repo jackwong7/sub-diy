@@ -3,7 +3,7 @@
 
 # look for empty dir
 if [ "ls -A /app/sub-web/src/views" = "" ]; then
-    cp -Rf /app/dev/views /app/sub-web/src/views
+    cp -Rf /var/dev/views /app/sub-web/src/views
 fi
 
 cd /app/sub-web && yarn serve &
