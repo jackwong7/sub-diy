@@ -6,7 +6,8 @@ WORKDIR /app
 RUN apk add --no-cache wget git nginx \
     && git clone https://github.com/CareyWang/sub-web \
     && cd sub-web \
-    && yarn install 
+    && yarn install \
+    && rm .env
 
 
 #sub service
