@@ -1,7 +1,8 @@
 version: '3.7'
 services:
   sub-diy:
-    image: joy88000/sub-diy
+    image: joy88000/sub-diy:latest
+    # build: .
     container_name: sub-diy
     restart: always
     environment:
@@ -23,5 +24,5 @@ services:
       - 7700:80
       - 7701:81
     volumes:
-     - ./Subconverter.vue:/app/sub-web/src/views/Subconverter.vue:rw
+     - ./views:/app/sub-web/src/views:rw
      - ./nginx/logs:/var/log/nginx/:rw
